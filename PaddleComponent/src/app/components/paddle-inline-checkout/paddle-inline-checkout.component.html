@@ -1,0 +1,16 @@
+<div class="checkout-container"></div>
+<div class="products-container">
+  <div>
+    <h1>{{checkOutName}}</h1>
+    <h3>{{checkOutDetail}}</h3>
+  </div>
+</div>
+<button appPaddle [vendor]="vendor" [env]="env" [product]="productId" email="test@test.com" [method]="'inline'"
+  (onCheckoutEvent)="checkEvent($event)" [frameTarget]="'checkout-container'" [frameInitialHeight]='450'
+  [frameStyle]="'width:100%; min-width:312px; background-color: transparent; border: none;'">
+  Subscribe(inline)
+</button>
+<button appPaddle [vendor]="vendor" [env]="env" [product]="productId" email="test@test.com" [method]="'overlay'"
+  (onCheckoutEvent)="checkEvent($event)" style="margin-left: 30px;">
+  Subscribe(overlay)
+</button>
